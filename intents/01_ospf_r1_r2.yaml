@@ -1,0 +1,7 @@
+requested_by: alice
+reason: Bring up OSPF between R1 and R2 so LAN1 and LAN2 can talk
+intent:
+  kind: ospf_link
+  action: enable
+  routers: [R1, R2]
+  cost: 10
