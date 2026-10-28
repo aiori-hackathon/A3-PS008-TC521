@@ -1,0 +1,8 @@
+requested_by: alice
+reason: Partner network 172.16.50.0/24 sits behind R2
+intent:
+  kind: static_route
+  action: add
+  router: R1
+  destination: 172.16.50.0/24
+  next_hop_router: R2

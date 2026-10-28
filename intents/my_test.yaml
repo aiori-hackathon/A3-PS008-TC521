@@ -1,0 +1,5 @@
+requested_by: sruja
+reason: testing a link from a router to itself
+intent:
+  kind: ospf_link
+  routers: [R1, R1]

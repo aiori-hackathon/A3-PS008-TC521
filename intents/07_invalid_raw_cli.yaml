@@ -1,0 +1,9 @@
+# BAD: tries to smuggle raw CLI and a malformed prefix past the schema.
+requested_by: mallory
+reason: just let me type commands
+intent:
+  kind: static_route
+  router: R1
+  destination: 10.0.3.5/24
+  next_hop_router: R2
+  raw_commands: ["no router ospf", "write erase"]

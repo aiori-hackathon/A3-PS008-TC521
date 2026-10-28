@@ -1,0 +1,9 @@
+# BAD: R1 already routes 172.16.50.0/24 via R2; a second next hop conflicts.
+requested_by: alice
+reason: Someone else also thinks the partner network is behind R3
+intent:
+  kind: static_route
+  action: add
+  router: R1
+  destination: 172.16.50.0/24
+  next_hop_router: R3

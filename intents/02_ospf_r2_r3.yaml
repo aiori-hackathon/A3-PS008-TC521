@@ -1,0 +1,7 @@
+requested_by: alice
+reason: Extend OSPF to R3 over the R2-R3 link
+intent:
+  kind: ospf_link
+  action: enable
+  routers: [R2, R3]
+  cost: 10

@@ -1,0 +1,7 @@
+requested_by: alice
+reason: Add the direct R1-R3 link to OSPF for a shorter path
+intent:
+  kind: ospf_link
+  action: enable
+  routers: [R1, R3]
+  cost: 5

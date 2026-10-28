@@ -1,0 +1,9 @@
+# BAD: R1 already sends 172.16.50.0/24 to R2. Sending it back to R1 creates a loop.
+requested_by: alice
+reason: Typo'd change — points the partner network back at R1
+intent:
+  kind: static_route
+  action: add
+  router: R2
+  destination: 172.16.50.0/24
+  next_hop_router: R1
