@@ -1,0 +1,20 @@
+# 3-router lab testbed (triangle) — single platform: FRRouting
+
+name: ps008
+platform: frr
+routers:
+  R1:
+    interfaces:
+      eth1: {ip: 10.0.12.1/30, peer: R2}
+      eth2: {ip: 10.0.13.1/30, peer: R3}
+      eth3: {ip: 10.0.1.1/24}        # LAN1 (host h1)
+  R2:
+    interfaces:
+      eth1: {ip: 10.0.12.2/30, peer: R1}
+      eth2: {ip: 10.0.23.1/30, peer: R3}
+      eth3: {ip: 10.0.2.1/24}        # LAN2 (host h2)
+  R3:
+    interfaces:
+      eth1: {ip: 10.0.13.2/30, peer: R1}
+      eth2: {ip: 10.0.23.2/30, peer: R2}
+      eth3: {ip: 10.0.3.1/24}        # LAN3 (host h3)
